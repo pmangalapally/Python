@@ -1,0 +1,10 @@
+print("Giraffe Academy")
+print("Giraffe\nAcademy")
+phrase = "Giraffe Academy"
+print(phrase.upper())
+print(phrase.lower())
+print(phrase.isupper())
+print(phrase.upper().isupper())
+print(len(phrase))
+print(phrase[0])
+print(phrase[-1])
