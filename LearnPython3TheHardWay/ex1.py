@@ -5,3 +5,6 @@ print ("This is fun.")
 print('Yay! Printing.')
 print("I'd much rather you 'not'.")
 print('I "said" do not touch this.')
+print("PK is the best!")
+print("Laura is PK's buddy")
+#I am done with this exercise.
