@@ -8,3 +8,6 @@ for character in message:
     count[character] = count[character] + 1
 
 pprint.pprint(count)
+
+count.setdefault('child_dictionary', {1,2,3,4})
+print(pprint.pformat(count))
