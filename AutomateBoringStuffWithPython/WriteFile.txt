@@ -1,0 +1,577 @@
+def func_kwargs(arg1, **kwargs):
+import pprint
+def list_parser (list_input):
+message = 'It was a bright cold day in April, and the clocks were striking thirteen.'
+def PrintTable(tabData):
+import random
+grid = [['.', '.', '.', '.', '.', '.'],
+# Reference work differently for mutable lists and immuatble variables.
+import random, sys
+import os
+def IsPositionValid(**kwargs):
+import time, sys
+theBoard = {'top-L': ' ', 'top-M': ' ', 'top-R': ' ',
+# Valid phone number is 3 digits - 3 digits - 4 digits
+def displayInventory(inventory):
+# inventory.py
+def func_kwargs(arg1, **kwargs):
+import pprint
+def list_parser (list_input):
+message = 'It was a bright cold day in April, and the clocks were striking thirteen.'
+def PrintTable(tabData):
+import random
+grid = [['.', '.', '.', '.', '.', '.'],
+# Reference work differently for mutable lists and immuatble variables.
+import random, sys
+def func_kwargs(arg1, **kwargs):
+import os
+def IsPositionValid(**kwargs):
+import time, sys
+theBoard = {'top-L': ' ', 'top-M': ' ', 'top-R': ' ',
+# Valid phone number is 3 digits - 3 digits - 4 digits
+def displayInventory(inventory):
+# inventory.py
+def func_kwargs(arg1, **kwargs):
+import pprint
+def list_parser (list_input):
+message = 'It was a bright cold day in April, and the clocks were striking thirteen.'
+def PrintTable(tabData):
+import random
+grid = [['.', '.', '.', '.', '.', '.'],
+# Reference work differently for mutable lists and immuatble variables.
+import random, sys
+def func_kwargs(arg1, **kwargs):
+import os
+def IsPositionValid(**kwargs):
+import time, sys
+theBoard = {'top-L': ' ', 'top-M': ' ', 'top-R': ' ',
+# Valid phone number is 3 digits - 3 digits - 4 digits
+def displayInventory(inventory):
+# inventory.py
+def func_kwargs(arg1, **kwargs):
+   # print('arg1', arg1)
+    for k, v in kwargs.items():
+        print(k, v)
+
+func_kwargs(**{'arg1': 'one', 'arg2': 'two', 'arg3': 'three'})
+# arg1 one
+# arg2 two
+# arg3 three
+
+#func_kwargs(**{'arg1': 'one', 'arg2': 'two', 'arg3': 'three', 'arg4': 'four'})
+# arg1 one
+# arg2 two
+# arg3 three
+# arg4 four
+
+#func_kwargs(**{'arg1': 'one', 'arg3': 'three'})
+# arg1 one
+# arg3 threeimport pprint
+message = 'It was a bright cold day in April, and the clocks were striking thirteen.'
+count = {}
+
+for character in message:
+    count.setdefault(character, 0)
+    #print(character, count[character])
+    count[character] = count[character] + 1
+
+pprint.pprint(count)
+
+count.setdefault('child_dictionary', {1,2,3,4})
+print(pprint.pformat(count))def list_parser (list_input):
+    string_output = ''
+    list_length = len(list_input)
+    if list_length >= 1:
+        list_index = 0
+        for list_index in range(list_length):
+            if list_length == 1 or list_index == 0:
+                string_output = str(list_input[list_index])
+            elif list_index < list_length - 1 and list_length >= 2:
+                string_output = string_output + ', ' + str(list_input[list_index])
+            else:
+                string_output = string_output + ', and ' + str(list_input[list_index])
+    else:
+        string_output = f"List {list_input} is empty"
+    
+    return string_output
+
+spam = [1, 2, 3, 4, 5, 6]
+print(spam)
+print(list_parser(spam))
+
+spam = [1]
+print(spam)
+print(list_parser(spam))
+
+spam = [1, 2]
+print(spam)
+print(list_parser(spam))
+
+spam = []
+print(spam)
+print(list_parser(spam))message = 'It was a bright cold day in April, and the clocks were striking thirteen.'
+count = {}
+
+for character in message:
+    count.setdefault(character, 0)
+    #print(character, count[character])
+    count[character] = count[character] + 1
+
+print(count)
+def PrintTable(tabData):
+
+    colWidth = []
+    counter = 0
+    if len(tableData) > 0:
+        for row in tabData:
+            #print(row)
+            if len(row) > 0:
+                innerTab = row
+                #print(innerTab)
+                innerCounter = 0
+                for innerrow in innerTab:
+                    columnWidth = len(innerrow)
+                    #print(columnWidth)
+                    #print(innerrow)
+                    
+                    if len(colWidth) > innerCounter:
+                        if columnWidth > colWidth[innerCounter]:
+                            colWidth[innerCounter] = columnWidth
+                    else:
+                        colWidth.append(columnWidth)
+                    
+                    innerCounter = innerCounter + 1
+                
+            counter = counter + 1
+
+
+    print(colWidth)
+
+    for rowlist in tabData:
+        printCounter = 0
+        ToBePrinted = ''
+        for printrow in rowlist:
+            ToBePrinted = ToBePrinted + printrow.rjust((colWidth[printCounter]+4), ' ')
+            printCounter = printCounter + 1
+        
+        print (ToBePrinted)
+
+    
+
+        
+
+
+ 
+                        
+tableData = [['apples', 'oranges', 'cherries', 'banana'],
+             ['Alice', 'Bob', 'Carol', 'David'],
+             ['dogs', 'cats', 'moose', 'goose'],
+             ['apples2', 'oranges2', 'cherries2', 'banana2']]
+
+
+PrintTable(tableData)import random
+
+for sample in range(10000):
+
+    previous_flip_type = None
+    flip_counter = 0
+    number_of_streaks = 0
+
+    for flip_number in range(100):
+        flip = random.randint(0,1)
+        #flip = 0
+        if flip == 0:
+            flip_type = 'T'
+        else:
+            flip_type = 'H'
+        
+        if previous_flip_type == flip_type:
+            flip_counter = flip_counter + 1
+        else:
+            flip_counter = 0
+
+        if flip_counter == 6:
+            flip_counter = 0
+            number_of_streaks = number_of_streaks + 1
+        print(flip_type, end = '')
+        previous_flip_type = flip_type
+
+    print("\n", number_of_streaks, "\n")
+    print('Chance of streak: {}%'.format(float((number_of_streaks/100))))
+grid = [['.', '.', '.', '.', '.', '.'],
+        ['.', 'O', 'O', '.', '.', '.'],
+        ['O', 'O', 'O', 'O', '.', '.'],
+        ['O', 'O', 'O', 'O', 'O', '.'],
+        ['.', 'O', 'O', 'O', 'O', 'O'],
+        ['O', 'O', 'O', 'O', 'O', '.'],
+        ['O', 'O', 'O', 'O', '.', '.'],
+        ['.', 'O', 'O', '.', '.', '.'],
+        ['.', '.', '.', '.', '.', '.']
+        ]
+
+length_grid = len(grid)
+loop_counter = 0
+for loop_1 in range(len(grid[1])):
+    for loop_2 in range(len(grid)):
+        print(grid[loop_2][loop_1], end = '')
+    print("\n")
+# Reference work differently for mutable lists and immuatble variables.
+spam = 42
+cheese = spam
+
+print(f"spam = {spam}")
+print(f"cheese = {cheese}")
+
+spam = 100
+
+print(f"spam = {spam}")
+print(f"cheese = {cheese}")
+
+#lists
+spam_list = [0, 1, 2, 3, 4]
+cheese_list = spam_list
+spamcopy_list = spam_list[:]
+
+print(f"spam = {spam_list}")
+print(f"cheese = {cheese_list}")
+print(f"spamcopy = {spamcopy_list}")
+
+cheese_list.append('Hello!')
+print(f"spam = {spam_list}")
+print(f"cheese = {cheese_list}")
+print(f"spamcopy = {spamcopy_list}")
+
+def eggs(SomeParameters):
+        SomeParameters.append('Hello')
+
+spam_fn = [1,2,3]
+print(f"spam = {spam_fn}")
+eggs(spam_fn)
+print(f"spam = {spam_fn}")
+
+#copy and deepcopy
+import copy
+
+list_original = [0, 1, 2, 3, 4]
+print(f"list_original: {list_original}")
+
+#copy.copy() is used copy lists that does not have inner lists.
+list_copy = copy.copy(list_original)
+print(f"Before making the changes list_copy: {list_copy}")
+
+list_copy.remove(4)
+
+print(f"After making the change list_copy: {list_copy}")
+
+nested_list_original = [1, [2, 3, 4], 5, 6]
+print(f"nested_list_original: {nested_list_original}")
+
+#copy.deepcopy() is used copy lists that have inner lists.
+nested_list_original_copy = copy.copy(nested_list_original)
+print(f"Before making the changes list_copy: {nested_list_original_copy}")
+
+nested_list_original_copy.remove(6)
+
+print(f"After making the change list_copy: {nested_list_original_copy}")import random, sys
+
+#Decalre and initialize varibales.
+wins = 0
+losses = 0
+ties = 0
+
+while True:
+    print(f"{wins} Wins, {losses} Losses, {ties} Ties'")
+
+    while True:
+        print("Enter your move: (r)ock (p)aper (s)cissors or (q)uit")
+        player_move = input(">")
+
+        if player_move == 'p' or player_move == 'r' or player_move == 's':
+            break
+        elif player_move == 'q':
+            sys.exit()
+        else:
+            print("Type one of valid inputs p or q or r or s")
+
+    # Display what the player chose:
+    if player_move == 'r':
+        print('ROCK versus...')
+    elif player_move == 'p':
+        print('PAPER versus...')
+    elif player_move == 's':
+        print('SCISSORS versus...')
+    
+    # Display what the computer chose:
+    random_number = random.randint(1, 3)
+
+    if random_number == 1:
+        computer_move = 'p'
+        print('PAPER')
+    elif random_number == 2:
+        computer_move = 'r'
+        print('ROCK')
+    else:
+        computer_move = 's'
+        print('SCISSORS')
+    
+    if player_move == computer_move:
+        print("It's a tie!")
+        ties = ties + 1
+    elif (player_move == 'p' and computer_move == 'r') or (player_move == 'r' and computer_move == 's') or (player_move == 's' and computer_move == 'p'):
+        print("You Win!")
+        wins = wins + 1
+    else:
+        print("You lose!")
+        losses = losses + 1
+    
+
+
+    
+def func_kwargs(arg1, **kwargs):
+import pprint
+def list_parser (list_input):
+message = 'It was a bright cold day in April, and the clocks were striking thirteen.'
+def PrintTable(tabData):
+import random
+grid = [['.', '.', '.', '.', '.', '.'],
+# Reference work differently for mutable lists and immuatble variables.
+import random, sys
+import os
+def IsPositionValid(**kwargs):
+import time, sys
+theBoard = {'top-L': ' ', 'top-M': ' ', 'top-R': ' ',
+# Valid phone number is 3 digits - 3 digits - 4 digits
+def displayInventory(inventory):
+# inventory.py
+def func_kwargs(arg1, **kwargs):
+import pprint
+def list_parser (list_input):
+message = 'It was a bright cold day in April, and the clocks were striking thirteen.'
+def PrintTable(tabData):
+import random
+grid = [['.', '.', '.', '.', '.', '.'],
+# Reference work differently for mutable lists and immuatble variables.
+import random, sys
+def func_kwargs(arg1, **kwargs):
+import os
+def IsPositionValid(**kwargs):
+import time, sys
+theBoard = {'top-L': ' ', 'top-M': ' ', 'top-R': ' ',
+# Valid phone number is 3 digits - 3 digits - 4 digits
+def displayInventory(inventory):
+# inventory.py
+def func_kwargs(arg1, **kwargs):
+import pprint
+def list_parser (list_input):
+message = 'It was a bright cold day in April, and the clocks were striking thirteen.'
+def PrintTable(tabData):
+import random
+grid = [['.', '.', '.', '.', '.', '.'],
+# Reference work differently for mutable lists and immuatble variables.
+import random, sys
+def func_kwargs(arg1, **kwargs):
+import os
+def IsPositionValid(**kwargs):
+import time, sys
+theBoard = {'top-L': ' ', 'top-M': ' ', 'top-R': ' ',
+# Valid phone number is 3 digits - 3 digits - 4 digits
+def displayInventory(inventory):
+# inventory.py
+import os
+SourcePath = '/Users/pavan/Desktop/GitHub/Python/AutomateBoringStuffWithPython'
+
+'''for filename in os.listdir(SourcePath):
+    print(filename)
+'''
+
+NewFile = os.path.join(SourcePath, 'WriteFile.txt')
+nf = open(NewFile, 'a')
+
+if os.path.exists(SourcePath):
+    for filename in os.listdir(SourcePath):
+        f = os.path.join(SourcePath, filename)
+        print(f)
+
+        fo = open(f,'r')
+
+        #print(fo.read())
+        for line in fo.read():
+            nf.write(line)
+
+
+nf.close()def IsPositionValid(**kwargs):
+
+    Positions = {'1a' : 'black', '1b' : 'white', '1c' : 'black', '1d' : 'white', '1e' : 'black', '1f' : 'white', '1g' : 'black', '1h' : 'white',
+                '2a' : 'white', '2b' : 'black', '2c' : 'white', '2d' : 'black', '2e' : 'white', '2f' : 'black', '2g' : 'white', '2h' : 'black',
+                '3a' : 'black', '3b' : 'white', '3c' : 'black', '3d' : 'white', '3e' : 'black', '3f' : 'white', '3g' : 'black', '3h' : 'white',
+                '4a' : 'white', '4b' : 'black', '4c' : 'white', '4d' : 'black', '4e' : 'white', '4f' : 'black', '4g' : 'white', '4h' : 'black',
+                '5a' : 'black', '5b' : 'white', '5c' : 'black', '5d' : 'white', '5e' : 'black', '5f' : 'white', '5g' : 'black', '5h' : 'white',
+                '6a' : 'white', '6b' : 'black', '6c' : 'white', '6d' : 'black', '6e' : 'white', '6f' : 'black', '6g' : 'white', '6h' : 'black',
+                '7a' : 'black', '7b' : 'white', '7c' : 'black', '7d' : 'white', '7e' : 'black', '7f' : 'white', '7g' : 'black', '7h' : 'white',
+                '8a' : 'white', '8b' : 'black', '8c' : 'white', '8d' : 'black', '8e' : 'white', '8f' : 'black', '8g' : 'white', '8h' : 'black'
+                }
+    
+    PlayerElements= {'bpawms' : 8, 'bking' : 1, 'bqueen' : 1, 'bbishop' : 2, 'bknight' : 2 , 'brook' : 2,
+                    'wpawms' : 8, 'wking' : 1, 'wqueen' : 1, 'wbishop' : 2, 'wknight' : 2 , 'wrook' : 2}
+
+    Counter= {'bpawms' : 0, 'bking' : 0, 'bqueen' : 0, 'bbishop' : 0, 'bknight' : 0 , 'brook' : 0,
+                    'wpawms' : 0, 'wking' : 0, 'wqueen' : 0, 'wbishop' : 0, 'wknight' : 0 , 'wrook' : 0}
+
+    print(kwargs.items())
+    for pos , element in kwargs.items():
+        #print(pos, element)
+        if pos not in Positions.keys() or element not in PlayerElements.keys():
+            return False
+        else:
+            Counter[element] = Counter[element] + 1
+    
+    #print("I am here")
+    for c, e in PlayerElements.items():
+        if e < Counter[c]:
+            return False
+    
+    return True
+
+#print("Test 1")
+print(IsPositionValid(**{'9b' :'bking', '1a' : 'wking'}))
+#print("Test 2")
+import time, sys
+indent = 0 # How many spaces to indent.
+indentIncreasing = True # Whether the indentation is increasing or not.
+
+try:
+    while True: # The main program loop.
+        print(' ' * indent, end='')
+        print('********')
+        time.sleep(0.1) # Pause for 1/10 of a second.
+
+        if indentIncreasing:
+            # Increase the number of spaces:
+            indent = indent + 1
+            if indent == 20:
+                # Change direction:
+                indentIncreasing = False
+
+        else:
+            # Decrease the number of spaces:
+            indent = indent - 1
+            if indent == 0:
+                # Change direction:
+                indentIncreasing = True
+except KeyboardInterrupt:
+    sys.exit()theBoard = {'top-L': ' ', 'top-M': ' ', 'top-R': ' ',
+            'mid-L': ' ', 'mid-M': ' ', 'mid-R': ' ',
+            'low-L': ' ', 'low-M': ' ', 'low-R': ' '}
+
+def printBoard(board):
+    print(board['top-L'] + '|' + board['top-M'] + '|' + board['top-R'])
+    print('-+-+-')
+    print(board['mid-L'] + '|' + board['mid-M'] + '|' + board['mid-R'])
+    print('-+-+-')
+    print(board['low-L'] + '|' + board['low-M'] + '|' + board['low-R'])
+printBoard(theBoard)
+
+#theBoard = {'top-L': 'O', 'top-M': 'O', 'top-R': 'O', 'mid-L': 'X', 'mid-M':
+#'X', 'mid-R': ' ', 'low-L': ' ', 'low-M': ' ', 'low-R': 'X'}
+
+#printBoard(theBoard)
+theBoardRemaining = theBoard.copy()
+
+turn = 'X'
+for i in range(9):
+    print(theBoard)
+    print('Turn for ' + turn + '. Move on which space?')
+    move = input('>')
+    while move not in theBoardRemaining.keys():
+        print("Enter valid input from the dictionary", theBoardRemaining)
+        move = input('>')
+    
+    del theBoardRemaining[move]
+
+    theBoard[move] = turn
+    if turn == 'X':
+         turn = 'O'
+    else:
+         turn = 'X'
+
+printBoard(theBoard)
+# Valid phone number is 3 digits - 3 digits - 4 digits
+# Example is 123-456-7890
+
+def isPhoneNumber(input_text):
+
+    if len(input_text.strip()) != 12:
+        return False
+
+    for pos in range(0,3):
+        if not input_text[pos].isdecimal():
+            return False
+    
+    if input_text[3] != '-':
+        return False
+    
+    for pos in range(4,7):
+        if not input_text[pos].isdecimal():
+            return False
+    if input_text[7] != '-':
+        return False
+    
+    for pos in range(8, 11):
+        if not input_text[pos].isdecimal():
+            return False
+    
+    return True
+
+
+print('Is 415-555-4242 a phone number?')
+print(isPhoneNumber('415-555-4242'))
+
+print('Is 415-555-42422 a phone number?')
+print(isPhoneNumber('415-555-42422'))
+
+print('Is 415-555-424  a phone number?')
+print(isPhoneNumber('415-555-424 '))
+
+print('Is Moshi moshi a phone number?')
+print(isPhoneNumber('Moshi moshi'))
+
+message = 'I am here for you call me at 222-111-3456 or 234-567-1234 phone numbers.'
+
+for i in range(len(message)):
+    chunk = message[i : i+12]
+
+    #print(chunk)
+    if isPhoneNumber(chunk):
+        print(f'{chunk} is a phone number.')def displayInventory(inventory):
+    print("Inventory:")
+    item_total = 0
+    for k, v in inventory.items():
+        print(str(v), ' ', k)
+        item_total = item_total + v
+    print("Total number of items: " + str(item_total))
+
+def addToInventory(inventory, addedItems):
+    #print("test")
+    count = 0
+    # your code goes here
+    for i in addedItems:
+        #print(i)
+        count = inventory.setdefault(i, 0)
+        inventory[i] = count + 1
+    return inventory
+
+inv = {'gold coin': 42, 'rope': 1}
+dragonLoot = ['gold coin', 'dagger', 'gold coin', 'gold coin', 'ruby']
+inv = addToInventory(inv, dragonLoot)
+displayInventory(inv)
+# inventory.py
+stuff = {'rope': 1, 'torch': 6, 'gold coin': 42, 'dagger': 1, 'arrow': 12}
+def displayInventory(inventory):
+    print("Inventory:")
+    item_total = 0
+    for k, v in inventory.items():
+        print(str(v), ' ', k)
+        item_total = item_total + v
+    print("Total number of items: " + str(item_total))
+
+displayInventory(stuff)
